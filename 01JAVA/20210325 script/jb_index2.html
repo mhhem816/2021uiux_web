@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    let x=5;
+    let y=7;
+    let result;
+    //let은 아직정하지않은값 공간만 만들어놈
+  result=(x > y)? x : y ;
+  //참이면 엑스값인 5가나오고 거짓이면 와아값7이나옴
+  document.write("큰값 : " + result +"<br>");
+  result = (x > y)? x-y : y-x;
+  document.write("차이값 : " + result + "<br>");
+
+//x=x+1;
+  x += 1;
+  console.log("x값:" + x)
+
+  const gender = "B";
+  const age = 21;
+  let resultl;
+  if(gender == "M"){
+    console.log("남자");
+  if(age >= 19){
+    resultl="남자/성인";
+  }else{
+    resultl="남자/미성년";
+  }
+  }else {
+    console.log("여자;")
+    if(age>=19){
+      resultl="여자/성인";
+    }else{
+      resultl="여자/미성년";
+    }
+  }
+  document.write("당신은 " + resultl + "입니다.");
+//젠더는 위쪽에있는 변수의 데이터(조건) 조건이값과다르면 여자 같으면남자나옴
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

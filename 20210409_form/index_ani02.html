@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+  html,body{height: 100%;}
+    body{
+      /* background-color:skyblue;
+      background-image: url(images/bg02.jpg);
+      background-repeat: no-repeat;
+      background-position: center; */
+      -webkit-background-size: cover;
+      background:url(images/bg02.jpg) no-repeat center;
+      background-size: cover;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      overflow:hidden
+    }
+    .wrap{
+      position: absolute;
+      left: 50%;top: 50%;
+      transform:translate(-50%,-50%);
+      z-index: 1
+      }
+    .wrap label{
+      display: block;width: 60px;height: 20px;
+      background:skyblue;background-image: url(images/searchtext.jpg);
+      text-indent:-9999px;position: absolute;top:15px;left:20px;
+      z-index:1
+    }
+    .wrap .inp-search{
+      width:400px;height: 50px;
+      border-radius:25px;text-indent:90px;
+      position: relative;
+    }
+    .wrap .inp-search:focus,.wrap .btn-search:focus{outline:none}
+    .wrap .btn-search{
+      width: 40px;height: 40px;
+      border: 2px solid #ddd;
+      background-image: url(images/search.jpg);
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent:-9999px;
+      border-radius:50%;
+      position: absolute;right:6px;top:50%;transform:translateY(-50%);
+      cursor:pointer
+    }
+    .wrap .img01{
+      position: absolute;right: -100px;top:-200px;
+
+      animation-name:bal01;
+      animation-duration: 3s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+      transform:rotate(5deg) scale(1)
+    }
+
+    @keyframes bal01 {
+      to{top:-300px;transform:rotate(-5deg) scale(1.1)}
+    }
+
+    .img00{
+      position: absolute;left:-100px;bottom:-100px;
+      animation-name:air;
+      animation-duration:3s;
+      animation-fill-mode:forwards;
+
+    }
+
+    @keyframes air {
+      to{left:100%;bottom:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="images/content2.png" alt="" class="img01">
+
+    <form action="#">
+      <label for="search">search</label>
+      <input type="text" id="search" placeholder="검색어를 입력하세요" class="inp-search">
+      <input type="submit" value="button" class="btn-search">
+    </form>
+  </div>
+  <img src="images/reallyAir.png" alt="" class="img00">
+</body>
+</html>

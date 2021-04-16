@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+/*        header*/
+        .header{width:1000px; height: 100px; background-color:red; margin: 0 auto; position: relative; text-align: center; }
+        .header h1{background-color:pink; width: 500px; text-align: center;}
+        .header .utill_menu{position: absolute; background: #fff; top:0; right:0; width: 300px; height: 40px; line-height: 40px;}
+        .header .gnb{position: absolute; width:100%; height:40px; background-color: #eee; bottom:0; line-height: 40px;}
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>logo</h1>
+        <div class="utill_menu">util_menu</div>
+        <nav class="gnb">main_menu</nav>
+    </header>
+</body>
+</html>
+
+
+<!--포지션에선톱값을 지정하지 않으면 분모나 윗블록으로 딸려올라간다 -->

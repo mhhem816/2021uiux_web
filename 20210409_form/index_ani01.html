@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100px;height: 100px;
+      background: #f0f;
+      animation-name:ani;
+      animation-duration:1s;
+
+      animation-fill-mode:forwards;  /* end */
+      animation-iteration-count:infinite;
+      animation-direction: alternate;
+      animation-delay:1s;
+      animation-timing-function: linear;
+
+    }
+    @keyframes ani {
+      from{width: 100px; background: #f00; opacity: 0;}
+        to{width: 200px; background: #0f0; opacity: 1;}
+        /* opacity를 어디에 넣느냐에따라 보이는색이달라짐 */
+    }
+    .boxWrap {width:600px; height: 600px; background: #eee; position: relative;}
+
+    .boxWrap .box01{width: 0; height: 10px;background: #000;
+
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    /* duration은 가는시간 딜레이는 기다리는시간 처음시작해서 박스1엔 시간을안준다 */
+    .boxWrap .box02{
+      width: 10px;height:0;
+      background: #f00;
+      position: absolute;
+      right:0; top:0;
+
+      animation-duration: 1s;
+      animation-fill-mode:forwards;
+      animation-delay: 1s;
+    }
+    /* rightf를 0으로 주면 오른쪽에서부터시작 top값을 0으로 주면 위에서 부터시작
+    가로길이가 10이고 세로는 0으로 준후 키프레임 속성을 이용해 새로값을준다 */
+    .boxWrap .box03{
+      animation-name: box03;
+      width: 0; height:10px;
+      background: #ff0;
+      position:absolute;
+      right:0; bottom:0;
+      animation-delay: 2s;
+      animation-fill-mode:forwards;
+      animation-duration: 1s;
+    }
+    .boxWrap .box04{
+      animation-name: box04;
+      width: 10px;height:0;
+      background: #0f0;
+      position: absolute;
+      animation-duration: 1s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      bottom:0; left:0;
+    }
+
+    @keyframes box01 {
+      from{width: 0;}
+        to{width: 600px;}
+    }
+    @keyframes box02{
+      from{height: 0;}
+      to{height: 600px;}
+    }
+    @keyframes box03{
+      from{width:0;}
+      to{width:600px;}
+    }
+    @keyframes box04{
+      from{height:0;}
+      to{height:600px;}
+    }
+    .boxWrap:hover .box01{animation-name: box01;}
+    .boxWrap:hover .box02{animation-name: box02;}
+    /*hover값을넣어 애니메니션을 생성할때는 스타일속성값에 이름을 주지말고 호버값에 이름을 주어야 실행이된다 */
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <div class="boxWrap">
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+    <div class="box04"></div>
+  </div>
+
+
+
+
+
+</body>
+</html>

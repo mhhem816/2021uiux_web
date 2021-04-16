@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for</title>
+</head>
+<body>
+  <script>
+    const dan =5;
+    document.write(dan + "x 1 = " +dan*1 + "<br>");
+    document.write(dan + "x 2 = " +dan*2+ "<br>");
+    document.write(dan + "x 3 = " +dan*3+ "<br>");
+    document.write(dan + "x 4 = " +dan*4+ "<br>");
+    document.write(dan + "x 5 = " +dan*5+ "<br>");
+    document.write(dan + "x 6 = " +dan*6+ "<br>");
+    document.write(dan + "x 7 = " +dan*7+ "<br>");
+    document.write(dan + "x 8 = " +dan*8+ "<br>");
+    document.write(dan + "x 9 = " +dan*9+ "<br>");
+
+    const dan1 =3
+      for(let i=1; i<=9; i++){
+      // ㄴ초기식 1,조건식 i<10,증감식 i++
+      console.log(i);
+      document.write(dan1 + " x " + i + " = " + dan1*i + "<br>")
+      //ㄴ실행문
+    }
+
+    // function 은 함수, gugudan(){}  gugudan 괄호는 인자변수값이다 인자값은 혼자서는 못쓰임
+  function gugudan(x){
+    for(let i = 1; i<10; i++){
+      document.write(x + "x" + i + "=" + x*i + "<br>" )
+    }
+
+  }
+
+  // gugudan(x); // 함수호출
+  </script>
+  <style>
+    div{float: left; width: 200px; border: 1px solid #000;}
+  </style>
+  <div>
+    <script>gugudan(3);</script>
+  </div>
+
+  <div>
+    <script>gugudan(4)</script>
+  </div>
+  <script>
+    let x =1;
+    let sum = 0;
+    while(x<101){          // (x <=100) 또는 x<101)로 써야 100이라는 값이나옴
+
+      //document.write(x+ "" );
+      sum = sum +x; //sum += x;
+      x++;// x는 x+1 이라는 뜻
+    }
+    console.log(sum);
+    document.write("1~100의 합은 : " + sum);
+  </script>
+</body>
+</html>

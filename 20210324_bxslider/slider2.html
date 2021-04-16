@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slider tap</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+                controls:false,
+                pagerCustom:".sliderTab",
+                auto:true
+
+            });
+        });
+    </script>
+    <style>
+        .wrap{width: 1000px; margin: 0 auto; position: relative;}
+        .wrap .slider li img{width: 100%;}
+        .bx-wrapper {
+            -moz-box-shadow:0 0 5px #ccc;
+            -webkit-box-shadow:0 0 5px #ccc;
+            box-shadow:0 0 5px #ccc;
+            border: 0 none;
+            margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager{
+            bottom:30px;
+        }
+        .txtWrap{
+            position: absolute;
+            width:400px;
+            top:100px;right:50px;
+        }
+/*        absolute를 넣어줘야 좌표값이설정됨!  position: absolute 사용하기*/
+         .txtWrap h2:after{
+             content: ""; display:  block; width:50%; height:1px; background:#000;
+             margin:10px 0;
+        }
+/*        h2 after은 .txtWrap의 블럭값으로 쓰임*/
+        .txtWrap p {margin-bottom:20px;}
+        .btn{display: block; width: 200px; line-height: 40px;
+            border: 1px solid #000; text-align: center;
+            border-radius:20px;
+            transition: 0.3s;
+        }
+/*        ㄴa 태그 속성에는 항상 디스플레이 블록으로 설정해 크기값(width나padding으로)주기! 트렌지션은 원조값에 넣어서강조 (예- hover전 태그) */
+        .btn:hover{
+            background: #000;
+            color:#fff;
+        }
+        .wrap .sliderTab{
+            background: #c4ff00;
+            width: 100%;
+            position: absolute;
+            left: 0; bottom: 0;
+         }
+ /* 앱솔루트주면 분모에 릴레이티브주기 */
+        .wrap .sliderTab a{
+          display:block; float:left; width:calc(100% / 3);
+            line-height: 40px; text-align: center;
+            clolr:#fff;
+        }
+        .wrap .sliderTab a:hover{
+            background: #f00;
+        }
+        .wrap .sliderTab a.active{
+            background: #f00;}
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <ul class="slider">
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h2>Lorem ipsum dolor sit. 1 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, officia.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h2>Lorem ipsum dolor sit. 2 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, officia.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h2>Lorem ipsum dolor sit. 3 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, officia.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sliderTab">
+            <a href="#" data-slide-index="0">menu1</a>
+            <a href="#" data-slide-index="1">menu2</a>
+            <a href="#" data-slide-index="2">menu3</a>
+<!--       데이터값은 항상 0부터 시작     -->
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>

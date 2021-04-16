@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p onmouseover="this.style.background='orchid'"
+  onmouseout="this.style.background='white'">마우스 올리면 변경</p>
+
+  <div class="Mouse">마우스</div>
+  <div class="Mouse1">마우스</div>
+  <script>
+    const divMouse = document.querySelector(".Mouse");
+    const divMouse1 = document.querySelector(".Mouse1");
+
+    divMouse.onmouseover = function(){
+      divMouse.style.background = "orchid";
+    }
+    divMouse.onmouseout = out;
+    function out(){
+      divMouse.style.background = "white";
+    }
+
+    divMouse1.addEventListener("mouseover",function(){
+      divMouse1.style.background = "skyblue";
+    });
+    divMouse1.addEventListener("mouseout",out1);
+    function out1(){
+      divMouse1.style.background = "white";
+    }
+  </script>
+</body>
+</html>

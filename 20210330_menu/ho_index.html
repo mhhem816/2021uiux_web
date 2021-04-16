@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sub menu</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav.gnb>ul>li").hover(function(){
+        console.log($(this).index() );
+        $(this).find(".submenu").show();
+      },function(){
+        $(this).find(".submenu").hide();
+      });
+    });
+  </script>
+  <style>
+    .submenu{display: none;}
+    .gnb{width: 1000px;margin: 0 auto;background:orange;position: relative;}
+    .gnb>ul>li{float: left;width: 20%;}
+    .gnb>ul>li>a{display: block;line-height:40px;text-align: center;}
+    /*.gnb>ul>li:hover .submenu{display: block;}*/
+
+    .submenu{position: absolute;background:skyblue;width: 100%;left: 0;}
+    .submenu li{float: left;}
+    .submenu li a{display: block;line-height:35px;text-align: center;padding:0 20px}
+  </style>
+</head>
+<body>
+  <nav class="gnb">
+    <ul class="clearfix">
+      <li><a href="#">MENU1</a>
+          <ul class="submenu clearfix" style="padding-left:0;">
+            <li><a href="#">smenu1_1</a></li>
+            <li><a href="#">smenu1_2</a></li>
+            <li><a href="#">smenu1_3</a></li>
+          </ul>
+      </li>
+      <li><a href="#">MENU2</a>
+          <ul class="submenu clearfix" style="padding-left:130px">
+            <li><a href="#">smenu2_1</a></li>
+            <li><a href="#">smenu2_2</a></li>
+            <li><a href="#">smenu2_3</a></li>
+          </ul>
+      </li>
+      <li><a href="#">MENU3</a>
+          <ul class="submenu clearfix" style="padding-left:330px">
+            <li><a href="#">smenu3_1</a></li>
+            <li><a href="#">smenu3_2</a></li>
+            <li><a href="#">smenu3_3</a></li>
+          </ul>
+      </li>
+      <li><a href="#">MENU4</a>
+          <ul class="submenu clearfix" style="padding-left:530px">
+            <li><a href="#">smenu4_1</a></li>
+            <li><a href="#">smenu4_2</a></li>
+            <li><a href="#">smenu4_3</a></li>
+          </ul>
+      </li>
+      <li><a href="#">MENU5</a>
+        <ul class="submenu clearfix" style="padding-left:650px">
+            <li><a href="#">smenu5_1</a></li>
+            <li><a href="#">smenu5_2</a></li>
+            <li><a href="#">smenu5_3</a></li>
+          </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

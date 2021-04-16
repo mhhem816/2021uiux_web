@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    
+    <style>
+        #header {background:#f0c0ed;}
+        #header .container li {
+            float:left;
+            width:calc(1000px /  6)    
+        }/*float로 메뉴를 한줄로 정렬하고 width로 메뉴 간격을 띄움 */
+        #header .container li a {
+            display:block;
+            line-height: 40px;
+            text-align:center;
+            font-weight: bold;
+        } /*text-align 으로 글자를 가운데로 line-height 로 메뉴칸 세로로 늘림 display로 인라인되어있는 글씨속성을 블럭속성으로 가운데 배치*/
+        #header .container li:hover {background: #e3cdcd;} /* 마우스 들 갖다대면 메뉴배경색이변함*/
+        #header .container li:hover a{color:#fff;} /*메뉴에가져다대면 글자색이변함*/
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            position:relative;            
+        } /*이미지사즈 1000픽셀로 조절 마진값이용하여 이미지 가운데 배치 position:relative로 부모역할함 
+        이미지 왼쪽또는 오른쪽으로 버튼을 이동하기위해 사용*/
+        .container li img {
+            width: 100%;
+            display: block;
+        } /*이미지 사이즈 간격 틈을 없애기위해 사용 */
+        .nextBtn,
+        .prevBtn{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            cursor:pointer;
+            
+        } /*position: absolute를 사용하여 버튼을 부모요소인 이미지 position:relativ에 적용시킴 마우스를 가져다 대면 손가락모양으로 커서가변함 transform: translate 화살표 간격을 50%만큼 이동 */
+        .nextBtn{right:0;}/*화살버튼 오른쪽*/
+        .prevBtn{left:0; }/*화살버튼 왼쪽*/
+        
+        
+        
+    .mb30 {margin-bottom: 30px !important;}  
+    
+    </style>  
+</head>
+<body>
+    <header id="header">
+        <container class="container">
+            <ul class="clearfix">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </container>
+    </header>
+    
+    <div class="container mb30">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt=""></li>
+            <li><img src="images/pc02.jpg" alt=""></li>
+            <li><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+        <div class="nextBtn">
+            <img src="images/next.png" alt="">
+        </div>
+           <div class="prevBtn">
+            <img src="images/prev.png" alt="">
+        </div>
+    </div>
+     
+     <div class="gray pt30 pb30">
+         <section class="containermb30" id="section1st">
+            <h2>GALLERY</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, repellat.</p>
+         <ul class=clearfix>
+                <li><img src="../images/testimg.jpg" alt="">
+                <div class="overlay">top <br>text</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                <div class="overlay">top</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                <div class="overlay">top</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                <div class="overlay">top</div>
+                </li>
+            </ul>
+        </section>
+       </div>
+ 
+</body>
+</html>

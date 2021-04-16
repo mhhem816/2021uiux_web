@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <style>
+        .wrap{background: #f0f;}
+        .gnb{width: 1200px; margin: 0 auto; height: 40px; position:relative;}
+        .gnb > ul > li {float: left; width:20%; background: #f0f;}
+        .gnb > ul > li:hover{background: #8000ff;}
+        .gnb > ul > li > a{display:block; line-height: 40px; text-align: center;}
+        .gnb > ul > li:hover a{color:aqua}
+        .gnb > ul >li:hover .submenu{display: block;}
+        /*.gnb > ul:hover .submenu{display: block;}*/
+/*        hover값을 어디에주느냐에따라 메뉴가완전다름 (1번을주석으로 처리하는것과2번주선처리와 다름!! 나중에 비교해보기)*/
+        
+        .gnb .submenu{display: none;}
+        .gnb .submenu{margin-bottom:10px; position: absolute;}
+        .gnb .submenu li:hover{background: #d988d9;}
+        .gnb .submenu li a{display: block; line-height: 30px; text-align: center;}
+        
+        .visual{}
+        .visual li img{width:100%;}
+        
+        
+    </style>
+    <script>
+        $(document).ready(function(){
+           $ (".slider").bxSlider()
+         });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="gnb">
+            <ul class="clearfix">
+                <li><a href="#">MENU1</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu1_1</a></li>
+                        <li><a href="#">smenu1_2</a></li>
+                        <li><a href="#">smenu1_3</a></li>
+                        <li><a href="#">smenu1_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU2</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu2_1</a></li>
+                        <li><a href="#">smenu2_2</a></li>
+                        <li><a href="#">smenu2_3</a></li>
+                        <li><a href="#">smenu2_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU3</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu3_1</a></li>
+                        <li><a href="#">smenu3_2</a></li>
+                        <li><a href="#">smenu3_3</a></li>
+                        <li><a href="#">smenu3_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU4</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu4_1</a></li>
+                        <li><a href="#">smenu4_2</a></li>
+                        <li><a href="#">smenu4_3</a></li>
+                        <li><a href="#">smenu4_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU5</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu5_1</a></li>
+                        <li><a href="#">smenu5_2</a></li>
+                        <li><a href="#">smenu5_3</a></li>
+                        <li><a href="#">smenu5_4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="visual">
+        <ul class="slider">
+            <li><img src="../images/pc01.jpg" alt=""></li>
+            <li><img src="../images/pc02.jpg" alt=""></li>
+            <li><img src="../images/pc03.jpg" alt=""></li>
+        </ul>
+        </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

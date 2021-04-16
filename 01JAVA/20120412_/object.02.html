@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>object</title>
+</head>
+<body>
+  <div id="carName"></div>
+  <div id="mycar"></div>
+  <script>
+    let car = {
+    name:"sonata",
+    color:"red",
+    speed:100,
+    "tier num":4,
+    start:function(){
+     return this.speed +100;
+    }
+  };//ㄴ객체선언,let car = new object(); 위 형태대로객체선언한값, new Date(); new Array(); 이있다
+  document.getElementById("carName").innerHTML = car.name;
+
+  let myCar = {};
+  myCar.name = "bolt";
+  myCar.color ="red";
+
+  //"key" in object;
+  "name" in myCar;
+
+  console.log("name" in myCar)
+
+  //for...in반복문
+  //for(key in object){} 키 값에는 이름을지정해서씀 변수이름처럼활용
+  for(key in myCar){
+    console.log(key+ " : " + myCar[key]);
+  }
+
+  function carView(){
+    document.getElementById("myCar").innerHTML = mycar.name;
+  }
+
+  //생성자함수
+  function Carblue(name,color){
+    this.name = name;
+    this.color = color
+  }
+
+  let hancar = new Carblue("sonata","blue");
+  let yourcar = new Carblue("avante","red")
+
+  </script>
+
+  <button onclick="carView()">나의자동차는</button>
+<!-- 오늘배운건 373p 참고 -->
+</body>
+</html>

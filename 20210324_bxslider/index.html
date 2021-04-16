@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mySlider = $('.slider').bxSlider({
+                auto:true,
+                pager:false,
+                controls:false
+            });
+            $(".nextBtn").click(function(){
+                mySlider.goToNextSlide();
+            });
+            $(".prevBtn").click(function(){
+                mySlider.goToPrevSlide();
+            });
+            
+        });
+    </script>
+    <style>
+        .container{width: 1000px;margin: 0 auto;position: relative;}
+        .container li img{width: 100%;display: block;}
+        
+        
+        
+        .bx-wrapper {
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0 none;
+            background: #fff;
+            margin-bottom:0;
+        }
+
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a.active{
+            background:red;
+        }
+
+        .nextBtn,.prevBtn{
+            position: absolute;top:50%;transform: translateY(-50%);
+            cursor: pointer
+        }
+        .nextBtn{right: 0;}
+        .prevBtn{left: 0;}
+        
+        #header{background:skyblue;}
+        #header .container li{float: left;width:calc(1000px / 6)}
+        #header .container li:hover{background:#148db1;}
+        #header .container li:hover a{color:#fff}
+        #header .container li a{
+            display: block;line-height:40px;text-align: center;
+            font-weight:bold
+        }
+        
+        
+        #section1st li{float: left;width:calc((1000px - 60px) / 4  )}
+        #section1st li + li{margin-left:20px;}
+/*
+        #section li{margin-left: 20px;}
+        #section li:first-child{margin-left:0;}
+*/    
+        #section1st h2,
+        #section1st p{text-align: center;}
+        #section1st h2:after{
+            content:"";display: block;
+            width: 100px;height: 1px;background: #000;
+            margin: 10px auto;
+        }
+        #section1st p{margin-bottom:20px;}
+        
+        
+        
+        #section2st li{float: left;width:calc((1000px - 60px) / 4  )}
+        #section2st li + li{margin-left:20px;}
+/*
+        #section li{margin-left: 20px;}
+        #section li:first-child{margin-left:0;}
+*/    
+        #section2st h2,
+        #section2st p{text-align: center;}
+        #section2st h2:after{
+            content:"";display: block;
+            width: 100px;height: 1px;background: #000;
+            margin: 10px auto;
+        }
+        #section2st p{margin-bottom:20px;}
+        
+        
+        
+        .mb30{margin-bottom:30px !important;}
+        .pt30{padding-top: 30px !important;}
+        .pb30{padding-bottom: 30px !important;}
+        .gray{background: #eee;}
+        
+    </style>
+</head>
+<body>
+   <header id="header">
+       <div class="container">
+           <ul class="clearfix">
+               <li><a href="#">menu1</a></li>
+               <li><a href="#">menu2</a></li>
+               <li><a href="#">menu3</a></li>
+               <li><a href="#">menu4</a></li>
+               <li><a href="#">menu5</a></li>
+               <li><a href="#">menu6</a></li>
+           </ul>
+       </div>
+   </header>
+    <div class="container mb30">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt=""></li>
+            <li><img src="images/pc02.jpg" alt=""></li>
+            <li><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+        <div class="nextBtn">
+            <img src="images/next.png" alt="">
+        </div>
+        <div class="prevBtn">
+            <img src="images/prev.png" alt="">
+        </div>
+    </div>
+
+    <div class="gray pt30 pb30">
+        <section class="container mb30" id="section1st">
+            <h2>GALLERY</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, officia!</p>
+            <ul class="clearfix">
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+    <section class="container" id="section2st">
+        <h2>GALLERY1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, officia!</p>
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    
+</body>
+</html>

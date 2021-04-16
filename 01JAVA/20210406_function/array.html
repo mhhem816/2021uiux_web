@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>array</title>
+</head>
+<body>
+  <script>
+    const city=["seoule","busan", "incheon", "daegu"]; //전역변수
+    function print(){
+      document.write("<ul>"); //반복되지않기위해 for문 바깥쪽에씀
+
+      for(let i=0; i<city.length; i++){
+        console.log(city[i]);
+        document.write("<li>");
+        document.write(city[i]);
+        document.write("</li>");
+      }
+        document.write("</ul>");
+    }
+    print();
+
+    const img =["pc01.jpg", "pc02.jpg", "pc03.jpg"];
+
+    function imgView(){
+      for(let i=0; i<img.length; i++){
+        document.write("<img src='../../images/" +img[i]+"'>");
+
+      }
+    }
+    const num = [95,,75,72,68];
+    let getAvg;
+    function printAvg(){
+      let sum = 0;
+      let count = 0;
+      for(let i=0; i<num.length; i++){
+        //sum = sum+i;
+        if(num[i] === undefined){
+          continue;
+        }else{
+          sum += num[i];
+          count++;
+        }
+
+      }
+      console.log("총합은:" +sum+ ",응시생:" +count);
+    return(sum / count );
+    }
+    getAvg = printAvg();
+    document.write("전체평균 : " + getAvg);
+
+  </script>
+
+  <div>
+    <script>
+      imgView();
+    </script>
+  </div>
+</body>
+</html>

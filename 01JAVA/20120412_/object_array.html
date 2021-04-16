@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>object</title>
+</head>
+<body>
+
+  <p id="data00"></p>
+  <p id="data01"></p>
+  <p id="data02"></p>
+
+
+  <p id="data10"></p>
+  <p id="data11"></p>
+  <p id="data12"></p>
+
+
+  <p id="data20"></p>
+  <p id="data21"></p>
+  <p id="data22"></p>
+
+<!-- 1번 p 0,1,2는 이름 , 두번째p 0,1,2,는색상값 세번째 0,1,2는 속력이다 -->
+<script>
+  let car1 = {name:"sonata",color:"red"}
+  let car = ["sonata","blue"];
+  let car2 = [
+    {name:"sonata",color:"green",speed:100},
+    {name:"jeep",color:"red",speed:100},
+    {name:"passat",color:"blue",speed:100}
+  ]
+
+
+  for(let i=0;i<car2.length;i++){
+    console.log(i);
+    document.getElementById("data"+i+"0").innerHTML ="자동차의 이름 : " + car2[i].name; + "입니다.";
+    document.getElementById("data"+i+"1").innerHTML = `${car2[i].name}의 색상은  ${car2[i].color} 입니다.`;
+    document.getElementById("date"+i+"2").innerHTML = `${car2[i].name}의 속력은 ${car2[i].speed} 입니다.`;
+  }
+  // 같은속성값인데 쓰는방식만다름
+</script>
+
+</body>
+</html>

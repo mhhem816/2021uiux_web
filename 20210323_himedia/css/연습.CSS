@@ -1,0 +1,7 @@
+@charset@charset "utf-8";
+header{margin: 0 auto; width: 100%; height: 70px;}
+header .topWrap{width: 980px; height: 30px; position: relative;}
+header .top{position: absolute; right:200px; display: block; }
+header .top li{float: left;}
+header .top li a{display: block; line-height:60px; text-align: center; margin-left: 15px; font-size: 12px;}
+header .top li:after{width:1px; height: 10px; background: #ff0; position: absolute; right:0; top:12px; content: ""; display: block; } 

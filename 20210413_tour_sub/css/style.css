@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+body{min-width:1200px;}
+
+/*header*/
+.header_wrap{position: relative;}
+/*.header:after{content:"";height: 5px;background-color: #0e73a7;display:block;}*/
+
+	/*util_menu*/
+	.util_menu_wrap{
+		height: 90px;
+		background-image: url(../img/util_bg.jpg);
+		background-position:0 0;
+	}
+	.util_menu{
+		width: 980px;height: 90px;
+		margin:0 auto;
+		position: relative;
+	}
+
+	.logo{
+		position: absolute;top:45px;
+		transform:translateY(-50%);
+	}
+
+
+	.search{
+		width: 290px;height: 30px;
+		background-color: #fff;
+		border-radius:15px;
+		position: relative;
+		position: absolute;left:280px;top:45px;
+		transform:translateY(-50%);
+	}
+
+	.search_text input{
+		line-height:30px;
+		border: 0 none;
+		position: absolute;left:86px;
+	}
+	.search_title{
+		position: absolute;left: 17px;top: 15px;
+		transform:translateY(-50%);
+	}
+	.search_icon{
+		position: absolute;right: 17px;top: 15px;
+		transform:translateY(-50%);cursor: pointer;
+	}
+
+	.call{
+		color:white;
+		font-size:25px;
+		font-weight:bold;
+		position: absolute;left:640px;top:43px;
+		transform:translateY(-50%);
+	}
+
+	.sns{
+		width:113px height: 24px;
+		position: absolute;right:0;top:45px;
+		transform:translateY(-50%);
+	}
+	.sns>a{
+		width: 24px;height: 24px;display:block;float:left;
+		margin-left:5px;
+		text-indent:-9999px;
+	}
+	.facebook{
+		background:url(../img/sns_icon.jpg);
+		background-position:0 0;
+	}
+	.twitter{
+		background:url(../img/sns_icon.jpg);
+		background-position:-24px 0;
+	}
+	.B{
+		background:url(../img/sns_icon.jpg);
+		background-position:-48px 0;
+	}
+	.in{
+		background:url(../img/sns_icon.jpg);
+		background-position:-72px 0;
+	}
+
+	/*gnb_menu*/
+	.gnb_menu_wrap{
+		background-color: #fbfbfb;position: relative;
+		border-bottom:5px solid #0e73a7;
+	}
+	.gnb_menu{
+		width: 980px;height: 60px;margin:0 auto;
+	}
+	.gnb_menu>ul{}
+	.gnb_menu>ul>li{
+		width: 16.66%;
+		float:left;border-right: 1px solid #e6e6e6;
+	}
+	.gnb_menu>ul>li:first-child{border-left: 1px solid #e6e6e6;}
+	.gnb_menu>ul>li>a{
+		position: relative;
+		display:block;
+		line-height:60px;
+		text-align:center;
+		font-weight:bold;
+
+	}
+	.gnb_menu>ul>li>a:hover{color:#005f9c;}
+	.gnb_menu>ul .on{color:#005f9c;}
+
+	.new{
+		position: absolute;top: 18px;
+		right: 30px;width: 20px;height: 20px;
+	}
+
+	.depth2_wrap{
+		display:none;
+		background:rgba(0,0,0,0.5);width: 100%;
+		position: absolute;z-index:2; left: 0;
+		border-top:5px solid #0e73a7;
+	}
+	.depth2{
+		}
+
+	.depth2>li{float:left;}
+	.depth2>li>a{
+		display:block;
+		color:#bfc3c6;font-size:0.9em;font-weight:bold;
+		line-height:35px; padding:0 7px;
+	}
+	.depth2 a.on{color:white;}
+
+	.gnb_menu>ul>li:nth-child(1) .depth2{padding-left:375px;}
+	.gnb_menu>ul>li:nth-child(2) .depth2{padding-left:530px;}
+	.gnb_menu>ul>li:nth-child(3) .depth2{padding-left:700px;}
+	.gnb_menu>ul>li:nth-child(4) .depth2{padding-left:870px;}
+	.gnb_menu>ul>li:nth-child(5) .depth2{padding-left:1025px;}
+	.gnb_menu>ul>li:nth-child(6) .depth2{padding-left:1190px;}
+
+	.gnb_menu>ul>li:hover .depth2_wrap{display:block;}
+
+
+/*index contents*/
+
+	/*background-image*/
+	.bg{
+		background:url(../img/bg.jpg);}
+
+
+
+
+		.container{height:1500px;position: relative;}
+		.visualImg{
+			height:300px;padding-top: 50px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size:cover
+		}
+		.container h3{text-align: center;color:white;font-size:48px;}
+		.contents{width: 980px;margin: 0 auto;background:#fff;padding:30px}
+
+
+
+/*company contents*/
+	.container.company{background-color: lightgray;}
+	.container.company .visualImg{background-image: url(../img/subimg01.jpg);}
+	.container.company .contents{position: absolute;top:250px;left:50%;transform:translateX(-50%)}
+
+/*tourcity contents*/
+	.container.tourcity{background-color: skyblue;}
+	.container.tourcity .visualImg{background-image:url(../img/util_bg.jpg)}
+	.container.tourcity .contents{position: absolute;top:250px;left:50%;transform:translateX(-50%)}
+
+
+
+/*main FOOTER*/
+footer{width: 980px;margin:0 auto;padding-bottom:27px;}
+footer ul{padding-bottom:15px;}
+footer li{float:left;padding-right:25px;}
+footer a{display:block;}
+footer>p{color:#aaaaaa;font-size:0.8em;}
+
+/*company FOOTER*/
+footer.company{width: 980px;margin:0 auto;padding-bottom:27px;}
+footer.company ul{padding-bottom:15px;}
+footer.company li{float:left;padding-right:25px;}
+footer.company a{display:block;}
+footer.company>p{color:#6d6d6d;font-size:0.8em;}
+.bold{font-weight:bold;color:black;}

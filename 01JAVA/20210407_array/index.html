@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>array</title>
+</head>
+<body>
+<script>
+  const city01 = ["서울", "부산", "대전"];
+  const city02 = ["대구","광주","인천"];
+
+  // array.forEach(function(){})
+  //
+  // function printArr(){}
+  // array.forEach(printArr); forEach문 매우중요 꼭 외우기 베열되어있는값을 돌릴떄사용
+  //item,index는 a,b와 값이같다.
+
+  function printArr(item,index){
+    document.write("배열인덱스" + index + ",데이타" + item + "<br>");
+  }
+  city01.forEach(printArr)
+
+  city02.forEach(function(a,b){
+  document.write("배열인덱스" + b + ",데이타" + a + "<br>");
+
+  });
+
+  const data = [
+    ["pc01.jpg","pc02.jpg","pc03.jpg"], //인덱스값 0
+    ["우주","지구","이미지"] //인덱스값 1
+  ];
+
+  function imgView(){
+    for(let i=0; i<data[0].length;i++){
+    document.write("<li>")
+    document.write("<img src='../../images/" + data[0][i] +"'>");
+    document.write("<p>" + data[1][i] + "</p>");
+    document.write("</li>")
+    }
+  };
+
+  const data1 = [
+    ["img1.jpg","이미지1","1000"],
+    ["img2.jpg","이미지2","2000"],
+    ["img3.jpg","이미지3","3000"],
+    ["img4.jpg","이미지4","4000"],
+    ["img5.jpg","이미지5","5000"],
+    ["img6.jpg","이미지6","6000"],
+    ["img7.jpg","이미지7","7000"]
+  ]
+
+  function imgView1(){
+    for(let i=0;i<data1.length;i++){
+      document.write("<img src='../../images/"+ data1[i][0]+"'>");
+      document.write("<p>" +data1[i][1] + "</p>");
+      document.write("<p>" +data1[i][2] + "원</p>");
+    }
+  }
+  imgView1();
+</script>
+
+<style>
+  li{list-style: none;}
+  *{margin: 0; padding: 0;}
+</style>
+<div>
+  <ul class="imgView">
+    <script>
+      imgView();
+    </script>
+  </ul>
+</div>
+
+
+
+</body>
+</html>

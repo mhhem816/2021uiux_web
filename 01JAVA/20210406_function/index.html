@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>function</title>
+  <script>
+    function add(a,b){
+      console.log(a+b);
+    }
+    add(100,50);
+
+    function dan(x){
+      for(let i=1; i<10; i++){  //for은 반복문
+        console.log(x + "x" + i + "=" + x*i);
+        document.write(x + "x" + i + "=" + x*i + "<br>");
+      }
+    }
+    dan(3);
+    //dan은 매개변수 3은 인자
+    function adder(n){
+      let sum = 0;
+      for(let i=1; i<=n; i++){  //i=1초기값,
+        sum = sum+i; // sum+i 로도 쓸수있다
+      }
+      return sum;
+    }
+      let result = adder(10);
+      console.log("결과 : " + result);
+
+  </script>
+</head>
+<body>
+<button onclick="add(10,20)">테스트1</button>
+<button onclick="add(30,50)">테스트2</button>
+<button onclick="dan(9)">테스트3</button>
+
+
+
+
+</body>
+</html>
