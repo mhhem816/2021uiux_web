@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fullpage").fullpage({
+                menu:".topMenu",
+                anchors:['m1st','m2st','m3st','m4st'],
+                navigation:true,
+                navigationTooltips: ['home', 'product', 'community', 'board'],
+		        showActiveTooltip: true
+            })
+        })
+    </script>
+    <style>
+        .section{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section.page1{background-image: url(images/bg1.jpg);}
+        .section.page2{background-image: url(images/bg2.jpg);}
+        .section.page3{background-image: url(images/bg3.jpg);}
+        .section.page4{background-image: url(images/bg4.jpg);}
+        #navTop{
+            position: fixed;z-index:1;background: #fff;
+            width: 100%;
+        }
+        #navTop li{display: inline-block;padding: 10px;}
+        #navTop li.active{background: skyblue;}
+        #fp-nav.right{right:10px;}
+        .fp-tooltip.right{right:20px}
+    </style>
+</head>
+<body>
+    <nav id="navTop">
+        <ul class="topMenu">
+            <li data-menuanchor="m1st"><a href="#m1st">menu1</a></li>
+            <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
+            <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
+            <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
+        </ul>
+    </nav>
+    <div id="fullpage">
+        <div class="section page1" data-anchor="m1st">1</div>
+        <div class="section page2" data-anchor="m2st">2</div>
+        <div class="section page3" data-anchor="m3st">3</div>
+        <div class="section page4" data-anchor="m4st">4</div>
+    </div>
+</body>
+</html>

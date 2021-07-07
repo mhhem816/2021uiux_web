@@ -3,11 +3,30 @@
 body{min-width:1200px;}
 
 /*header*/
-header {width:100%; height:100px; margin: 0 auto; background:url(../img/util_bg.jpg); position: relative; background-color: #086AA5;}
-header img{position: absolute; top:20px; left:145px; }
-header .search { position:absolute;top:40px; left:400px; border-radius:15px;
- position:relative; width: 300px;background: #fff;}
+header {width:100%; height:100px; margin: 0 auto; background:url(../img/util_bg.jpg); position: relative; background-color: #086AA5; margin:0 auto;}
+header img{position: absolute; top:20px; left:145px; margin:0 auto;}
+.search{
+  width: 290px;height: 30px;
+  background-color: #fff;
+  border-radius:15px;
+  position: relative;
+  position: absolute;left:450px;top:45px;
+  transform:translateY(-50%);
+}
 
+.search_text input{
+  line-height:30px;
+  border: 0 none;
+  position: absolute; left:86px;
+}
+.search_title{
+  position: absolute;left: 17px;top: 15px;
+  transform:translateY(-50%);
+}
+.search_icon{
+  position: absolute; left: 250px;top: 15px;
+  transform:translateY(-50%);cursor: pointer;
+}
 header .logoNum{position: relative;}
 header .logoNum p{
     position: absolute;
@@ -16,13 +35,13 @@ header .snsWrap{}
 
 
 
-header .gnbWrap{position: relative; background:#e6e6e6; border-bottom:4px solid #0e73a7; top:70px;}
+header .gnbWrap{ margin: 0 auto; position: relative; background:#e6e6e6; border-bottom:4px solid #0e73a7; top:92px;}
 header .gnb .clearfix:after{
             content:"";
             display: block;
             clear: both;
            }
-        .gnb {width:100%
+        .gnb {width:100%;
             margin:0 auto;}
         .gnb li {float: left; width:200px; transition:0.3s; border-right:1px solid #898888;}
 .gnb li:first-child {border-left: 1px solid #898888;}
@@ -36,3 +55,22 @@ header .gnb .clearfix:after{
 /*container*/
 .container {width:100%; height:1600px; margin: 0 auto; background:url(../img/bg.png); position: relative; top:36.4px; background-repeat:no-repeat;}
 .container .valun{position: absolute; left:600px; top:50px;}
+
+fieldset{border:none;}
+legend{display: block; position: absolute; left:0; top:-9999px;}
+.formWrap{position: absolute; width: 600px; height: 359px; left: 363px; top: 175px; background: #fff;}
+.formWrap label{display: block; margin: 0 auto; padding:5px; color:#605656; font-weight:bold;}
+.formWrap .left,.formWrap .right{width:200px;background: #f00;float: left;}
+.formWrap #golo{display: block; width:100%; height:39px; font-size: 1rem; text-indent:8px;border-radius: 5px; color: #a5a5a5; }
+.formWrap #country {color:#000;}
+.formView{width: 420px;}
+
+.formWrap #first{float: left; width: 138px; height: 37px; margin-left:47px;}
+.formWrap #last{float: right; width: 138px; height: 37px; margin-right:83px;}
+.formWrap #cgrade{float: left; width: 138px; height: 37px;margin-left:47px;}
+.formWrap #adult{float: left; width: 78px; height: 37px; margin-left:18px}
+.formWrap #kis{float: right; width: 78px; height: 37px;  margin-left:18px; margin-right:40px;}
+
+.formWrap .left input,.formWrap .right input{width: 100%;border-radius:5px; border:1px solid #aaa; height: 40px; text-indent:8px; font-size: 1.2rem; font-weight: bold; }
+.formWrap .left{margin-right: 20px;}
+.formWrap .box{background:#0e73a7;}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <form action="calc.php" method="get">
+   모자 <input type="checkbox" name="hap1" value="10000" onclick="calc(this)">
+   가방 <input type="checkbox" name="hap2" value="20000" onclick="calc(this)">
+   구두 <input type="checkbox" name="hap3" value="100000" onclick="calc(this)">
+    </form>
+    <script>
+        let sum = 0;
+        function calc(cBox){
+            //console.log(cBox.value)
+            if(cBox.checked){
+                
+                sum = sum + parseInt(cBox.value);
+                console.log(sum);
+            }else{
+                sum = sum -parseInt(cBox.value);
+            }
+            
+            document.getElementById("sumtext").value = sum;
+        }
+    
+    </script>
+</body>
+</html>

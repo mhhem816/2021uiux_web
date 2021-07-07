@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tab</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    ul.tab{width: 1000px;margin: 0 auto}
+    ul.tab li{
+      float: left;width:calc( 1000px / 5 );text-align: center;line-height: 40px;
+    }
+    ul.tab li:first-child{background:pink;}
+    .boxWrap{width: 1000px;margin: 0 auto;border: 1px solid #000;}
+    .boxWrap div{padding:20px;display: none;}
+    .boxWrap div:nth-child(1){display: block;}
+  </style>
+</head>
+<body>
+  <ul class="tab clearfix">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+  <div class="boxWrap">
+    <div>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium a, odio assumenda doloremque doloribus quis iste natus similique eaque sapiente.</div>
+    <div>2. Ipsa officia quibusdam autem quos quod labore, commodi saepe, adipisci voluptates ab assumenda minus ea optio aliquid. Assumenda dolore, odio.</div>
+    <div>3. Officia fugit vel excepturi recusandae molestiae vitae quas vero doloremque nulla, ut repellat autem perferendis, voluptates itaque, praesentium explicabo expedita?</div>
+    <div>4. Fuga modi ex, necessitatibus accusamus, deleniti nostrum reprehenderit magni laudantium quibusdam assumenda minus alias cupiditate consequatur! Est molestias, obcaecati facere.</div>
+    <div>5. Ab eum asperiores aliquam aut, aliquid. Eos earum maiores vero, labore omnis hic nisi dolorem esse architecto pariatur sed repellat.</div>
+  </div>
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    //$(".boxWrap div").hide().eq(0).show();
+    //$(".tab>li").eq(0).css("background","pink");
+
+    $(".tab>li").click(function(){
+      $(".tab>li").css("background","initial")
+      $(this).css("background","pink");
+      let t = $(this).index();
+      $(".boxWrap div").hide().eq(t).show();
+    });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

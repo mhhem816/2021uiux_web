@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slider</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script src="../../js/jquery.mousewheel.min.js"></script>
+  <style>
+    .wrapper img{display: block;width: 500px;}
+    .wrapper{ width: 500px; height: 240px; margin:0 auto;
+      background:pink; overflow:hidden;}
+    .wrapper ul{position: relative;  width: 500px; height: 200px;}
+    .wrapper li{position: absolute; left:100%;}
+    .wrapper li:nth-child(1){ left: 0;}
+    .wrapper span{cursor:pointer}
+    .wrapper .pager span{display: inline-block; width: 15px; height: 15px; background: #ddd;
+    border-radius: 10px; text-indent: -9999px;}
+    .wrapper .pager span.active{background: #f00;}
+  </style>
+  <script>
+      $(document).ready(function(){
+        let current = 0;
+        const banner = $(".wrapper li");
+        const pager = $(".pager span")
+        const banCount = banner.length; // 5
+        let i=0; //next image
+        let overBtn = false;
+
+
+        $(".next").click(function(){
+          if(overBtn==false){
+            overBtn = true;
+            i = current + 1;
+            if(i==banCount){i=0;}
+            sliderView();
+          } // if overbtn
+        }); //next click
+
+
+        $(".prev").click(function(){
+          if(overBtn == false){
+            overBtn = true;
+            i = current - 1;
+            if(i==-1){i=banCount-1;}
+            sliderView()
+          }
+        });
+
+
+        function sliderView(view){
+          pager.removeClass("active").eq(i).addClass("active")
+
+          if(view == "next"){
+          banner.eq(current).css({left:0}).stop().animate({left:"-100%"},1000);
+          banner.eq(i).css({left:"100%"}).stop()
+            .animate({left:0},{duration:1000,complete:function(){overBtn=false}});
+
+        }else{
+          banner.eq(current).css({left:0}).stop().animate({left:"100%"},1000);
+          banner.eq(i).css({left:"-100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false}});
+
+        }
+
+      current = i;
+      }
+
+      pager.click(function(){
+        i = $(this).index();
+        sliderView("next");
+      });
+
+      function trigger(){
+        $(".next").trigger("click");
+      }
+      //setInterval(trigger,3000); 3초동안 자동으로 움직임
+
+      $(window).mousewheel(function(event,delta){
+        if(delta<0){
+          $(".next").trigger("click");
+        }else{
+          $(".prev").trigger("click");
+        }
+      });
+    }); //ready
+    </script>
+</head>
+<body>
+  <div class="wrapper">
+    <!--   ul>li*5>img[src="../../images/images0$.jpg"] -->
+    <ul>
+      <li><img src="../../images/images01.jpg" alt=""></li>
+      <li><img src="../../images/images02.jpg" alt=""></li>
+      <li><img src="../../images/images03.jpg" alt=""></li>
+      <li><img src="../../images/images04.jpg" alt=""></li>
+      <li><img src="../../images/images05.jpg" alt=""></li>
+    </ul>
+
+<div class="btn">
+    <span class="prev">이전</span>
+    <span class="next">다음</span>
+  </div>
+<div class="pager">
+<span class="active">1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+</div>
+</div>
+</body>
+</html>

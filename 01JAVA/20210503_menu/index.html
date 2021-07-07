@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>scrollMenu</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script src="js/app.js"></script>
+  <style>
+    html,body{height: 100%;}
+    .scene{
+      width: 100%; height: 100%;
+    /* background-image: url(../../images/pc01.jpg); */
+   background-attachment:fixed;
+   background-position: center;
+   background-repeat:no-repeat;
+   background-size: cover;
+   display:flex; justify-content:center; align-items: center;
+ }
+
+   .scene.one{background-image: url(../../images/pc01.jpg);}
+   .scene.two{background-image: url(../../images/pc02.jpg);}
+   .scene.three{background-image: url(../../images/pc03.jpg);}
+   .viewTxt{width: 600px; text-align: center; color:#fff; text-shadow:0 0 10px #000;}
+   .viewTxt h2{font-size:2rem;}
+   .viewTxt h2:after{content:""; display: block; height: 1px; background: #fff;
+    margin:10px 0; }
+    nav.menu{position: fixed; width: 100%;background: skyblue; padding:0 20px;}
+    nav.menu a{display: block; float: left; line-height: 40px; width: 100px; text-align:center;}
+    nav.menu a:hover{background:pink;}
+    nav.menu a.active{background: pink;}
+  </style>
+</head>
+<body>
+  <nav class="menu clearfix">
+    <a href="#v01s" class="active">MENU01</a>
+    <a href="#v02s">MENU02</a>
+    <a href="#v03s">MENU03</a>
+  </nav>
+  <section class="scene one" id="v01s">
+    <div class="viewTxt">
+      <h2>#1 Lorem ipsum dolor sit amet.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Non architecto, nihil nam, error nulla, velit inventore perferendis
+         provident dolor repudiandae dolore esse quis aliquid itaque unde
+         ratione magnam voluptatibus at.</p>
+    </section>
+    </div>
+    <section class="scene two" id="v02s">
+      <div class="viewTxt">
+        <h2>#2 Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Non architecto, nihil nam, error nulla, velit inventore perferendis
+           provident dolor repudiandae dolore esse quis aliquid itaque unde
+           ratione magnam voluptatibus at.</p>
+      </section>
+      </div>
+      <section class="scene three" id="v03s">
+        <div class="viewTxt">
+          <h2>#3 Lorem ipsum dolor sit amet.</h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Non architecto, nihil nam, error nulla, velit inventore perferendis
+             provident dolor repudiandae dolore esse quis aliquid itaque unde
+             ratione magnam voluptatibus at.</p>
+        </div>
+  </section>
+
+</body>
+</html>

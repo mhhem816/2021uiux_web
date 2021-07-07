@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <span id="div" style="background:green;">자동 회전하는 텍스트</span>
+  </div>
+  <button onclick="stop()">stop</button>
+  <script>
+    const div = document.getElementById("div");
+    let timeId = setInterval("doRotate()",300);
+
+    function stop(){
+    clearInterval(timeId);
+  }
+    function doRotate(){
+      let str = div.innerHTML;
+      let firstChar = str.substr(0,1);
+      let remains = str.substr(1,str.length-1);
+      str =  remains + firstChar;
+      div.innerHTML =str;
+    }
+    //doRotate();
+  </script>
+</body>
+</html>

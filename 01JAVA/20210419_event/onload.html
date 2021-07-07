@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onload</title>
+  <script>
+     // window.onload = function(){
+     //   alert("hi_3");
+     //   dLoad();
+     // }
+
+
+    //window.onload = dLoad; 함수의 이름을 등록함 밑에 펀션이랑 같은 값
+
+    // function dLoad(){
+    //   alert("hi_4");
+    // }
+  </script>
+
+  <script>
+    function cImg(){
+      //alert("hi");
+      const sel = document.querySelector("#sel");
+      const img = document.querySelector("#myImg");
+      const imgW = document.querySelector("#imgW");
+
+      img.onload = function(){
+        imgW.innerHTML = img.width;
+      }
+
+      let index = sel.selectedIndex;
+      console.log(index);
+      img.src = sel.options[index].value;
+      console.log(img.width+"px")
+
+
+    }
+  </script>
+
+</head>
+<body onload="cImg()">
+  <script>
+    // window.onload = function(){
+    //   alert("hi_2");
+    // }
+    // 이벤트가 들어어오고 함수가들어감  바디끝에주로쓰임
+  </script>
+
+
+  <form>
+    <select id="sel" onchange="cImg()">
+      <option value="../../images/apple.png">사과</option>
+      <option value="../../images/banana.png">바나나</option>
+      <option value="../../images/testimg.jpg">탑</option>
+      </select>
+  <span id="imgW"></span>
+  </form>
+  <p>
+    <img src="../../images/apple.png" alt="" id="myImg">
+  </p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slider</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <style>
+    .wrapper img{display: block;width:500px}
+    .wrapper{
+      width: 500px;height: 220px;margin: 0 auto;
+      background:orange;overflow: hidden;
+    }
+    .wrapper ul{position: relative;width: 500px;height: 200px;}
+    .wrapper li{position: absolute;left:100%}
+    .wrapper li:nth-child(1){left:0;}
+    .wrapper span{cursor:pointer}
+  </style>
+  <script>
+    $(document).ready(function(){
+      let current = 0;
+      const banner = $(".wrapper li");
+      const banCount = banner.length;
+      let i=0; //next image
+      let overBtn = false;
+
+      // 대상.on("click",function(){})
+      $(".next").click(function(){
+      if(overBtn == false){
+        overBtn = true;
+          i = current + 1;
+
+          if(i==banCount){
+            i=0;
+          }
+
+          banner.eq(current).css({left:0}).stop().animate({left:"-100%"},1000);
+          banner.eq(i)
+            .css({left:"100%"})
+            .stop()
+            .animate({left:0},{duration:1000,complete:function(){overBtn=false}});
+
+          // console.log("현재위치:"+ current + ", 다음위치:" + i );
+
+
+          current = i;
+        }
+      }); //next btn
+
+      $(".prev").click(function(){
+        if(overBtn == false){
+          overBtn = true;
+          i = current - 1;
+
+          if(i == -1){
+            i = banCount - 1;
+          }
+
+          banner.eq(current).css({left:0}).stop().animate({left:"100%"},1000);
+          banner.eq(i).css({left:"-100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false}});
+          current = i;
+        }
+      }); // prev btn
+
+      // $(".run").click(function(){
+      //   $(".next").trigger("click");
+      // })
+
+      // setInterval(함수이름,3000);
+      // setInterval(function(){},3000);
+      function trigger(){
+        $(".next").trigger("click")
+      }
+
+      setInterval(trigger,3000);
+
+    }); //ready
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- ul>li*5>img[src="../../images/images0$.jpg"] -->
+    <ul>
+      <li><img src="../../images/images01.jpg" alt=""></li>
+      <li><img src="../../images/images02.jpg" alt=""></li>
+      <li><img src="../../images/images03.jpg" alt=""></li>
+      <li><img src="../../images/images04.jpg" alt=""></li>
+      <li><img src="../../images/images05.jpg" alt=""></li>
+    </ul>
+    <div class="btn">
+      <span class="prev">이전</span>
+      <span class="next">다음</span>
+      <span class="run">실행</span>
+    </div>
+    <!-- <div class="prev">이전</div>
+    <div class="next">다음</div> -->
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+© 2021 GitHub, Inc.
+<!-- next 제작 console.log () 0-1/1-2 변수
+current/banner/<i>
+2 이미지애니메이션 적성
+3 prev제작
+4아중클릭방지 overBtn = false구현
+5 setIntaval() /toggle()작성  -->

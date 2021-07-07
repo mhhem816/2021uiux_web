@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>radio</title>
+</head>
+<body>
+  <form>
+    <!-- <input type="hidden" name="userid" value="jin"> -->
+    <!-- 히든은 누가 값을썼는지 확인하여출력할떄씀 -->
+    <!-- <input type="text" name="userid"> -->
+    <label for="seoule">서울</label>
+    <input type="radio" name="city" value="seoul" id="seoul">&nbsp;&nbsp;
+    <label for="busan">부산</label>
+    <input type="radio" name="city" value="busan" id="busan">&nbsp;&nbsp;
+    <label for="chunchen">춘천</label>
+    <input type="radio" name="city" value="chunchen" id="chunchen">&nbsp;&nbsp;
+    <input type="button" value="확인" onclick="findChecked()">
+  </form>
+  <script src="app.js"></script>
+</body>
+</html>

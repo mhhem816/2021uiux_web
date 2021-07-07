@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>togglemenu</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <style>
+  .toggleMenu{
+   width: 50px;height: 50px;
+   border: 2px solid #204C7B;
+   position: absolute;
+   cursor:pointer;
+   right: 0;top: 0;
+   display: none;
+ }
+ .toggleMenu div{
+   width: 25px;height: 2px;
+   background:#204C7B;
+   border-radius:3px;
+   position: absolute;
+   left:50%;transform:translateX(-50%);
+   transition:0.3s
+ }
+ .bar1{top:14px;}
+ .bar2{top:24px;}
+ .bar3{top:34px;}
+
+ .toggleMenu.change{
+       border: 2px solid #fff;
+ }
+
+    .toggleMenu.change .bar1{
+      left:50%;top:50%;transform:translate(-50%,-50%) rotate(-45deg);
+      background: #fff;
+    }
+    .toggleMenu.change .bar2{
+      opacity:0;
+    }
+    .toggleMenu.change .bar3{
+      left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);background: #fff;
+    }
+
+    .menuWrap{
+      width: 1200px;height: 50px;background:pink;margin: 0 auto;
+      position: relative;}
+    .menuWrap h1{
+      background:skyblue;width: 100px;text-align: center;height: 50px;
+    }
+    #myTopMenu{position: absolute;left: 100px;top: 0;}
+    #myTopMenu a{display: block;float: left;padding:14px 10px}
+    .content{width: 1200px;margin: 0 auto}
+
+
+    @media screen and (max-width:575px){
+      body{background:green;}
+      .menuWrap{width: 100%;}
+      .toggleMenu{display: block;}
+      #myTopMenu{
+        position: fixed;width: 80%;height: 100%;
+        background:#004072; left: 100%; top: 0;
+        display:flex;justify-content: center;align-items: center;
+        _transition:0.3s
+      }
+
+      .topNav{width:100%; height: 90%;}
+      .topNav a{float:initial !important;
+        font-family: "Sansation";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: -0.09em;
+        color: #FFFFFF;
+        border: 1px solid #fff;}
+      .content{width: 100%;padding: 20px 20px;}
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="menuWrap clearfix">
+    <h1>logo</h1>
+    <div id="myTopMenu">
+      <h1 class="logo"><a href="#">SEOULE SKY</a></h1>
+        <div id="myTopMenu">
+
+        <nav class="topNav clearfix">
+        <a href="#" class="menuTitle">전체메뉴</a>
+        <a href="#">SEOUL SKY</a>
+        <a href="#">시설안내</a>
+        <a href="#">관람안내</a>
+        <a href="#">온라인예매</a>
+        <a href="#">고객센터</a>
+      </nav>
+    </div>
+
+    </div>
+    <div class="toggleMenu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+
+  <script>
+
+
+    $(".toggleMenu").click(function(){
+      const toggle = $(".toggleMenu").attr("class"); //get
+
+      if(toggle == "toggleMenu"){
+        $(".toggleMenu").addClass("change");
+        //$("#myTopMenu").css("left",0);
+        $("#myTopMenu").stop().animate({left:"20%"});
+
+      }else{
+        $(".toggleMenu").removeClass("change");
+        //$("#myTopMenu").css("left","-100%");
+        $("#myTopMenu").stop().animate({left:"100%"});
+      }
+    });
+
+
+    let winSize = $(window).innerWidth();
+
+    function titleMenu(){
+      if(winSize < 700){
+        $(".menuTitle").show();
+      }else{
+        $(".menuTitle").hide();
+      }
+    }
+
+    titleMenu()
+
+    $(window).resize(function(){
+      winSize = $(window).innerWidth();
+      titleMenu();
+      $("#myTopMenu").removeAttr("style");
+      $(".toggleMenu").removeClass("change");
+    });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

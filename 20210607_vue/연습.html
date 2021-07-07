@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="명작 in product">{명작}</li>
+        </ul> 
+
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                massege:'flower'
+                product:['장미','나팔꽃','해바라기','민들레','데이지',],
+                link:['#1','#2','#3','#4','#5']
+
+            }
+
+        
+        
+        })
+    </script>
+</body>
+</html> 

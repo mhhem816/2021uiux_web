@@ -180,7 +180,7 @@ footer a{display:block;}
 footer>p{color:#aaaaaa;font-size:0.8em;}
 
 /*company FOOTER*/
-footer.company{width: 980px;margin:0 auto;padding-bottom:27px;}
+footer.company{width: 980px;margin:0 auto; padding-bottom:27px;}
 footer.company ul{padding-bottom:15px;}
 footer.company li{float:left;padding-right:25px;}
 footer.company a{display:block;}

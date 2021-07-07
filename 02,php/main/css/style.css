@@ -1,0 +1,24 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a:link,a:visited{color:#000; text-decoration: none;}
+.clearfix:after{content:""; clear: both; display: block;}
+
+
+#herder{width: 960px; margin: 0 auto;}
+#header h1{text-align: center; margin-bottom: 10px;}
+.gnb{border: 1px solid #000; margin-bottom: 10px;}
+.gnb li{float: left; width:calc(100% / 5);}
+.gnb li a{display: block; text-align: center; line-height: 40px;}
+.gnb li.active{background: skyblue;}
+
+.container{width: 960px; height: 1000px; margin:0 auto; margin-bottom: 10px;}
+.container .content{float: left; width: 760px; height: 100%; background: #f00;}
+.container .aside{float: right; width: 190px; height: 100%; background: #0f0;}
+.container .content,.container .aside,#footer{display: justify-content:center; align-items: center; color:#fff;}
+#footer{width: 960px; height: 80px; margin: 0 auto; background:#00f;}
+
+/**/
+.visual{height: 300px; background:gray;display: flex; justify-content: center; align-items: center; }
+.visual.company{}
+.visual.product{background:orange;}

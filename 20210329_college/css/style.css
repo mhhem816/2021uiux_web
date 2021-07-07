@@ -138,5 +138,8 @@
 #contents .container .txtWrap8 h2{color:#fa2b2b; font-size:50px; font-weight:100px;}
 #contents .container .txtWrap8 li a {margin:10px;}
 
-#footer {width:100%; margin: 0 auto;}
-#footer ul li{float:left; color:#000; text-align: center; margin:0 auto; }
+footer{width: 980px;margin:0 auto; padding-bottom:27px;}
+footer ul{padding-bottom:15px;}
+footer li{float:left;padding-right:25px;}
+footer p{color:#6d6d6d;font-size:0.8em;}
+.bold{font-weight:bold;color:black;}

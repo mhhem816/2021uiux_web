@@ -1,0 +1,26 @@
+@charset "UTF-8";
+    @media screen and (max-width:575px){
+      body{background:green;}
+      .menuWrap{width: 100%;}
+      .toggleMenu{display: block;}
+      #myTopMenu{
+        position: fixed;width: 100%;height: 100%;
+        background:orange;left:0;top:-100%;
+        display:flex;justify-content: center;align-items: center;
+        _transition:0.3s
+      }
+      .topNav{background:green;width: 50%;}
+      .topNav a{float:initial !important;text-align: center;}
+      .content{width: 100%;padding: 20px 20px;}
+    }
+
+    @media screen and (min-width:576px) and (max-width:991px){
+      body{background:skyblue;}
+      .menuWrap{width: 100%;}
+      #myTopMenu{left:initial;right: 0;}
+      .content{width: 100%;padding: 20px 20px;}
+    }
+    @media screen and (min-width:992px){
+      .menuWrap{position: fixed;left: 50%;transform: translateX(-50%);}
+      .content{padding-top:70px;}
+    }

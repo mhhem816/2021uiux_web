@@ -1,0 +1,63 @@
+!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="black-bg" v-if="view == true">
+            <div class="white-bg">
+                <img v-bind:src="`./images/${pimg[current]}`" alt="">
+                <div class="txt">
+                    <h4>{{product[current]}}</h4>
+                    <p>{{price[current]}}원</p>
+                </div>
+                <button v-on:click="view = false">닫기</button>
+            </div>
+        </div>
+        <ul class="list">
+            <li v-for="(item,i) in product">
+                <img v-bind:src="`./images/${pimg[i]}`" alt="">
+                <div class="txt">
+                    <h4 v-on:click="view=true;current=i">{{product[i]}}</h4>
+                    <p>{{price[i]}}원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                current:0,
+                view:false,
+                pimg:['1750.jpg','2224.jpg','1740.jpg','1715.jpg'],
+                product:['2021 캐논데일 탑스톤 카본 2 그래블 바이크','예거 메티 G5 그래블 바이크(APEX1)','2021 메리다 리액토 디스크 5000 로드 자전거','2021 자이언트 리브 인챈트 20 라이트 어린이 자전거'],
+                price:[5200000,1090000,3400000,240000],
+            }
+        })
+    </script>
+    <style>
+        html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        #app{padding: 0 20px;}
+        ul.list li img{width: 100%;}
+        ul.list li{margin-bottom: 20px;}
+        .black-bg{
+            position: fixed;background: rgba(0,0,0,0.3);
+            left:0;width: 100%;height: 100%;display: flex;justify-content: center;
+            align-items:center
+            }
+        .white-bg{
+            background: #fff;width: 80%;_height: 300px;
+            padding:20px;border-radius:5px
+        }
+        .white-bg img{width: 100%;}
+    </style>
+</body>
+</html>

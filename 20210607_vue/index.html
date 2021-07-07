@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- <li>{{product[0]}}</li>
+            <li>{{product[1]}}</li>
+            <li>{{product[2]}}</li> -->
+            <!-- 배열숫자가없을떄는  대괄호 안 세가지값이 다 출력됨 [자전거 스쿠터 이동형]
+                배열데이터에서 인덱스값을넣으면 각자의값이 배열된다. 자전거 스쿠터 이동형-->
+            <!-- <li v-for="명작 in product">{{명작}}</li> -->
+         <!-- for in문: product안 단어가 생긴값만큼 표출되어 단어를 보여줌 
+        만약중괄호안에 그냥 product[숫자]를 넣으면 각배열에 해당되는값만 개수만큼보여준다
+    예) <li v-for="명작 in product">{{product[0]}} 은 자전거 자전거 자전거 -->
+        <!-- <li v-for="(item,index) in product" v-bind:class="myclass"> 
+            <a v-bind:href="link[index]">{{product[index]}}</a>
+        </li> -->
+            <!-- <li v-for="(명작,i) in product">
+                <a v-bind:href="link[i]">{{product[i]}}</a>
+            </li> -->
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                message:'진미혜',
+                product:['자전거','스쿠터','이동형','유아용','이벤트','주니어'],
+                link:['#1','#2','#3','#4','#5','#6'],
+                myclass:'testjin'
+            }
+
+
+        })
+    </script>
+</body>
+</html>

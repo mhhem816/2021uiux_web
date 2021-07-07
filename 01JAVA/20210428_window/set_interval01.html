@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>time</title>
+</head>
+<body>
+  <p id="time"></p>
+  <button onclick="eTime()">멈추기</button>
+  <button onclick="sTime()">다시시작</button>
+  <script>
+    const time = document.getElementById("time"); //$(".#time")
+
+
+    let myTime = 0;
+    //console.log(timeView);
+    //time.innerHTML = timeView;
+    //외우기 document.getElementById("time") 을 줄여서 타임이라고씀 html에 넣기위에서 씀
+    function sTime(){
+      if(myTime ==0){
+      myTime = setInterval("timer()",1000); //setInterval("함수",1초);
+    }
+    console.log(myTime)
+  }
+    function timer(){
+      let date = new Date(); //객체를 가지고올땐 앞에new붙이기
+      let timeView = date.toLocaleTimeString();
+      time.innerHTML = timeView;
+    }
+    timer();
+    sTime();
+
+    function eTime(){
+    clearInterval(myTime);
+    myTime = 0
+  }
+    //1초에 한번씪 변하는값으로 설정했기떄문에 html에서도 시계가 1초후에뜸 그래서 함수펀션 타이머
+    //밑에 타이머변수값을 한번더 불러줌
+
+
+  </script>
+</body>
+</html>

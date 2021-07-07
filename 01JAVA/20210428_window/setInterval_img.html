@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+</head>
+<body>
+  <button onclick="stop()">stop</button>
+
+  <div>
+      <span id="div" style="background:green;"><img src="../../images/img7.jpg" alt=""></span>
+  </div>
+
+  <script>
+    let num = 1;
+    const div = document.getElementById("div");
+    let timeId = setInterval("doRotate()",1000);
+
+    function stop(){
+    clearInterval(timeId);
+    }
+
+    function doRotate(){
+    num++;
+    if(num>7){num=1}
+    div.innerHTML=`<img src="../../images/img${num}.jpg">`;
+     //div.innerHTML = "<img src=\"../../images/img"+num+".jpg\">";
+  }
+  </script>
+</body>
+</html>

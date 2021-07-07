@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* reset */
+*{margin: 0; padding:0; box-sizing: border-box;}
+a:link,a:visited{color:#000; text-decoration: none;}
+li{list-style: none;}
+.clearfix:after{content: ""; display: block; clear: both;}
+
+/* header */
+header{display: flex; justify-content:center; height: 100px;}
+.container{width: 1000px; display: flex; justify-content: space-between;} /* header{} container{ margin:0 auto;} 로 써도됨*/
+  .logo{display: flex; align-items: center;}
+  .menu{display: flex; align-items: center;}
+  .menu ul{display: flex;}
+  .menu ul a{display:block; padding: 15px}
+  .menu ul a:hover{background:gray; color: #fff;}
+  .mobile_menu{width: 30px; height: 30px; display: none;}
+
+  /* banner */
+  #banner{
+    background-image:url(../images/banner/tony-stark-poster.jpg);
+    background-position:center;
+    background-size:cover;
+     height: 600px;
+     /* width: 100%; */
+     display:flex; justify-content: center;}
+
+    .banner_txt{
+      display: flex;
+    flex-direction: column;
+    flex:1; align-items: flex-end; justify-content:center; color:#fff;}
+    .banner_txt h2{font-size: 2.5rem; width: 400px; text-align: left;}
+    .banner_txt p{font-size: 1.3rem; width: 400px; text-align: left;}
+
+    .column{flex-direction: column;}
+    .banner_option{display: flex; }
+    .banner_option>div{
+      flex: 1; color:#fff; padding:15px;
+    }
+    .banner_title{font-weight: bold; font-size: 1.3rem; margin-bottom: 10px;}
+    .banner_option a{color:red;font-size: 1.1rem; font-weight: bold;}
+    .banner_option a:hover{border-bottom: 1px solid #fff;}
+
+/* general */
+#general{display: flex; justify-content: center;}
+#general section{flex:2;}
+#general aside{flex: 1; background: red;}
+
+.widget-title{padding:25px  0;}
+.widget-title-txt{font-size: 1.2rem; font-weight: bold;}
+.widget-title-txt:after{
+  content:""; display: block; width:50px; height: 3px; background:rgb(4, 10, 85);
+  margin-top: 10px;
+}
+
+.widget-body{display: flex; flex-wrap: wrap;}
+.widget-body article{flex:1 1 300px; margin-right: 20px; margin-bottom: 20px;} /* flex:1;min-width:300px로 표현가능 */
+
+.news-thumb img{width: 100%;}
+.news-date{display: flex; margin-bottom: 10px;}
+.news-date-at{
+  background:red; color:#fff; font-weight: bold; font-size:0.9rem; padding:7px;
+  margin-right: 2px;
+}
+
+.news-comments{
+  background:black; color:#fff; font-weight: bold; font-size:0.9rem; padding:7px;}
+.news-title{font-weight: bold;}
+
+.widget.poster{margin-bottom:20px;}
+.widget.poster .widget-body{
+  justify-content: space-between;
+}
+
+.widget.poster .widget-body img.mb20{ margin-bottom: 20px;}
+footer{background: #000; padding: 30px 0; display: flex; justify-content: center; color:#fff;}
+
+@media screen and (max-width:700px){
+  header {height: 60px;}
+  .logo{padding-left: 16px;}
+  .logo img{width: 100px;}
+  .menu{padding-right: 16px;}
+  .menu ul{display: none;}
+  .banner_txt{align-items: center;}
+  .mobile_menu{display: flex; flex-direction: column; justify-content:space-around;}
+  .mobile_menu_line{height: 4px; background: #000; border-radius: 2px;}
+  .banner_txt{align-items:center; }
+  .banner_option{ flex-direction: column; }
+  .banner_option a{display: none;}
+  .banner_option>div{padding:20px; padding-bottom: 0;}
+
+  .banner_option>div:last-child{padding-bottom: 20px;}
+
+  /* general */
+  #container{flex-direction: column;}
+  #general{padding:0 20px;}
+  .widget-body article{margin-right:0}
+
+  .widget.poster{display: none;}
+  .widget-body iframe{
+    width: -webkit-fill-available;
+    height: 230px;
+  }
+}

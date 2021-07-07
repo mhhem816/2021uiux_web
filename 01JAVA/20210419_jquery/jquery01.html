@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jquery</title>
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      console.log( $("p").eq(1).css("background") );
+      $("p").eq(2).css("color","red");
+      document.getElementsByTagName("p")[3].style.color = "blue";
+    });
+  </script>
+
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat corporis quasi assumenda suscipit quod praesentium exercitationem perspiciatis, harum, eius quia quaerat at animi eum, nemo. Eveniet ad architecto placeat, consequuntur.</p>
+  <p>Laborum facere ducimus iusto ad similique natus accusantium saepe incidunt cumque ea possimus, accusamus beatae est culpa quasi aut ex. Obcaecati libero sapiente ducimus, earum molestias, eaque magnam necessitatibus voluptate.</p>
+  <p>Sunt magni iusto sed explicabo, aliquam, vero ut quas delectus est, dolores, voluptatum nihil nobis fugit ullam? Suscipit iste nostrum, pariatur illum, aliquam accusantium facilis labore cumque culpa quidem laborum.</p>
+  <p>Nobis in dolorum fugit, vitae sunt excepturi vel atque repudiandae. Culpa numquam at dignissimos nemo excepturi, perspiciatis. Consequatur est temporibus id recusandae, reprehenderit asperiores enim aliquam nihil veniam, voluptas labore!</p>
+  <p>Maiores neque pariatur, facere est vitae aspernatur dolore ex, perferendis placeat sint ullam sunt enim beatae id aliquid dolor fugiat quisquam voluptatibus quidem ducimus iste error? Laborum laudantium, inventore ducimus!</p>
+
+
+  <ul class="tab">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+  <div class="boxWrap">
+    <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, illo.</div>
+    <div class="box2">2. Quod tenetur nostrum et similique quia porro, nam impedit quis?</div>
+    <div class="box3">3. Atque libero saepe ducimus temporibus, harum repellendus tenetur consequatur. Illum?</div>
+    <div class="box4">4. Ea distinctio fuga sapiente, porro dolore. Labore et perspiciatis consectetur.</div>
+    <div class="box5">5. Quos magni cum rerum, odit quo, laboriosam provident dolorum odio!</div>
+  </div>
+<script>
+  //$(".tab>li").on("click",function(){})
+  //$(".boxWrap>div").hide();
+  //$(".boxWrap>div").eq(0).show();
+
+  $(".boxWrap>div").hide().eq(0).show();
+
+  $(".tab>li").click(function(){
+    //$(".tab>li").eq(0).css("background","pink");
+    $(".tab>li").css("background","white");
+    $(this).css("background","pink");
+
+    console.log($(this).index());
+
+    $(".boxWrap>div").hide().eq($(this).index()).fadeIn();;
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -28,12 +28,19 @@
   <div class="box box3">box3</div>
   <div class="view">
     <p>scroll:<span class="scrollView">0</span></p>
+    <p>window Height / 2 :<span class="winHeight">0</span></p>
   </div>
   <script>
     const scrollY = document.querySelector(".scrollView");
     const boxPos = document.querySelectorAll(".box");
-    //window.addEventListener("scroll",function(){
+    const winH = document.querySelector(".winHeight");
+
+
+
+    window.addEventListener("scroll",function(){
     //console.log(window.pageYOffset);
+
+
       const scrollYPosition = window.pageYOffset;
       scrollY.innerHTML = scrollYPosition;
 
@@ -43,13 +50,24 @@
     //    boxPos[0].classList.remove("boxview");
       //}
       for(let i=0; i<boxPos.length; i++){
-        if(boxPos[i].offsetTop<scrollYPosition + window.innerHeight/2){
+        if(boxPos[i].offsetTop<scrollYPosition + winHeight){
+          //window.innerHeight/2브라우저의 번정도왔을떄 미리실행
           boxPos[i].classList.add("boxview");
         }else{
           boxPos[i].classList.remove("boxview");
         }
       }
     });
+
+    //window.addEventListener("resize",function(){});
+    window.addEventListener("resize",view);
+    function view(){
+      const winHeight = window.innerHeigh/2;
+      winH.innerHTML = winHeight;
+    }
+    view();
+
+
     //뭐리셀랙터 첫번째값만사용 쿼리셀랙터올은 전체를 사용 , 셀렉터 리무브 처음설정값으로 돌아감,
   </script>
 </body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    body{height: 4000px;}
+    .box{
+      width: 100px;height: 100px;
+      background:skyblue;
+      position: absolute;transition:0.3s;
+      left:0
+
+    }
+    .view{
+      position: fixed;right: 0;bottom: 0;
+      padding: 20px;background:#eee;
+    }
+    .boxview{background:orange;left:500px}
+    .box.box1{top:700px}
+    .box.box2{top:1400px}
+    .box.box3{top:2000px}
+  </style>
+</head>
+<body>
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+  <div class="view">
+    <p>scroll : <span class="scrollView">0</span></p>
+    <p>window Height / 2 : <span class="winHeight">0</span></p>
+  </div>
+  <script>
+    const scrollY = document.querySelector(".scrollView");
+    const boxPos = document.querySelectorAll(".box");
+    const winH = document.querySelector(".winHeight");
+
+
+
+    function view(){
+      const winHeight = window.innerHeight/2;
+      winH.innerHTML = winHeight;
+
+      window.addEventListener("scroll",function(){
+
+        const scrollYPosition = window.pageYOffset;
+        scrollY.innerHTML = scrollYPosition;
+
+        for(let i=0;i<boxPos.length;i++){
+          if(boxPos[i].offsetTop<scrollYPosition + winHeight){
+            boxPos[i].classList.add("boxview");
+          }else{
+            boxPos[i].classList.remove("boxview");
+          }
+        }
+
+      });
+    }
+    //window.addEventListener("resize",function(){});
+    window.addEventListener("resize",view);
+    view();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

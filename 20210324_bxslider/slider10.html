@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bxslider</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <style>
+    img{display: block;}
+    .sliderWrap{width: 500px;height: 300px; margin:0 auto;}
+    .sliderWrap .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    border:0 none;
+    background: #fff;
+}
+    .sliderWrap .img{position: absolute; bottom: 10px;left: 10px; font-size: 2rem; color: #0f0;}
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(".slider").bxSlider({
+        pager:false //떙떙이와 가양 모서리가사라지는 속성
+      });
+    })
+  </script>
+</head>
+<body>
+<div class="sliderWrap">
+  <ul class="slider">
+    <li><img src="images/bg01.jpg" alt=""><a href="" class="img">산1</a></li>
+    <li><img src="images/bg02.jpg" alt=""><a href=""class="img">산2</a></li>
+    <li><img src="images/bg03.jpg" alt=""><a href=""class="img">산3</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

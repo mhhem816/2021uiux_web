@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onclick</title>
+  <style>
+    html,body{height: 100%;}
+  </style>
+</head>
+<body onmousemove="where(event)">
+  <script>
+    function where(e){
+      console.log("x값:"+e.clientX+", y값:" + e.clientY)
+    }
+  </script>
+  정보입력<input type="text" id="exp" value="0"><br>
+  값<input type="text" id="result" >
+  <input type="button" value="계산" onclick="calc()">
+  <script>
+    function calc(){
+      const exp = document.getElementById("exp");
+      const result = document.getElementById("result");
+      console.log(eval(exp.value));
+
+      result.value = eval(exp.value);
+    }
+  </script>
+
+  <div>mouse <span
+    onmousedown="down(this)"
+    onmouseup = "up(this)"
+    onmouseover = "over(this)"
+    onmouseout = "out(this)"
+    onwheel = "wheel(event,this)"
+
+    >event</span> ok</div>
+  <script>
+    function down(obj){
+      //document.querySelector("span").style.fontStyle = "italic";
+      //document.getElementsByTagName("span")[0].style.fontStyle = "italic";
+      //document.querySelectorAll("span")[0].style.fontStyle = "italic";
+      obj.style.fontStyle = "italic";
+    }
+    function up(obj){
+      obj.style.fontStyle = "normal";
+    }
+
+    function over(obj){
+      obj.style.border = "2px solid violet";
+    }
+    function out(obj){
+      obj.style.border = "1px solid lightgray";
+    }
+
+      let width = 0; //let값이어디에위치하냐에따라 다름 함수안에있으면 -1감소 함수밖에있음 +1씩증가
+    function wheel(e, obj){
+          // console.log(e.wheelDelta);
+
+          if(e.wheelDelta < 0){
+            width--;
+            if(width<0){width = 0;}
+          }else{
+      width++;
+    }
+      console.log(width);
+      obj.style.boderWtyle="solid";
+      obj.style.borderwidth = width + "px";
+      //obj.style.borderwidth =`${width} + px`;
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

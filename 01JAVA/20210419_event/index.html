@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event</title>
+</head>
+<body>
+  <p id="p">마우스를 올려보세요.</p>
+  <button onclick="btnClick(event)">클릭하세요.</button>
+  <script>
+    function btnClick(e){                //e는 인자
+      alert(event.type)    //event type에는 onclick="btnClick(event)속성같이들어감
+    }
+    //document.getElementById("p").onmouseover = btnClick;
+    //document.querySelector("#p").onclick = btnClick;
+    document.querySelectorAll("p")[0].onmousedown = btnClick;
+  </script>
+</body>
+</html>

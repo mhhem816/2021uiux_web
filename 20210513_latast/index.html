@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing:border-box;}
+    li{list-style:none;}
+    a:link,a:visited{color:#000; text-decoration:none;}
+    .clearfix:after{content:"";display: block;clear: both;}
+
+    .section{width: 1200px; margin:auto; padding: 30px 0;}
+    .section .section_title{  float: left; width: 200px;}
+    .section .section_title h3 {margin-bottom: 10px;}
+    .section .section_title a{ color:#555; }
+    .section .section_title .more_btn{display: block; width: 23px; height: 23px;
+      background-image: url(images/more_btn.png);
+    background-repeat:no-repeat;
+    background-position: 0 -23px;
+   text-indent:-9999px;}
+   .section .section_title .more_btn:hover{background-position: 0 0;}
+
+    .section .section_contents{  float: left; width: 1000px;}
+    .section .section_contents .news_list li {float: left; width:calc( 100% / 4 );
+ padding:0 30px; padding-bottom: 20px;}
+      .section .section_contents .news_list li+li {border-left:1px solid #ddd;}
+      .section .section_contents .news_list .news_title {margin-bottom: 40px;
+      font-size:16px;}
+      .section .section_contents .news_list .date {text-align:right;}
+  </style>
+</head>
+<body>
+  <div class="section clearfix">
+    <div class="section_title">
+  <h3><a href="#">웃음게시판</a></h3>
+  <a href="#" class="more_btn">more</a>
+    </div>
+      <div class="section_contents">
+        <ul class="news_list clearfix">
+          <li>
+            <a href="#">
+              <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
+              <p class="date">2021-05-13</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
+              <p class="date">2021-05-13</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
+              <p class="date">2021-05-13</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
+              <p class="date">2021-05-13</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</body>
+</html>

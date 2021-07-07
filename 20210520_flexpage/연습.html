@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/reset.css">
+  <title>Document</title>
+  <style>
+  header{display:flex; justify-content: center; height: 100px;}
+  .container{width: 1000px; display: flex; justify-content:space-between;}
+  .logo{display: flex; align-items: center;}
+  .menu{display: flex; align-items: center;}
+  .menu ul{display:flex;}
+  .menu ul a{padding:15px; display: block;}
+  .menu ul a:hover{background: #eee; }
+
+  #banner{
+    display: flex; justify-content: center;
+    background-position:center;
+    background-image:url(images/banner/tony-stark-poster.jpg);
+    height: 600px; /* 백그라운드 이미지를 적용할때는 width 값이나
+    hight값을줘서 크기를 조절해야함 */
+
+  }
+  .bannerTxT{color:#fff; display: flex; flex-direction: column; justify-content: center;}
+  .bannerTxT h2{font-size: 2.5rem; width: 400px; text-align: left;}
+  .bannerTxT p{font-size: 1.3rem; width: 400px; text-align: left;}
+
+  .banner_option{display:flex; flex-end;
+  }
+  .banner_option>div{color:#fff; padding:15px;}
+  .banner_option a{color:red; font-size: 1.5rem; margin-bottom: 10px;}
+  .banner_option a:hover{border-bottom: 1px solid #fff; }
+  .banner_title{font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="images/logo/logo.png" alt=""></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">menu1</a></li>
+          <li><a href="#">menu2</a></li>
+          <li><a href="#">menu3</a></li>
+          <li><a href="#">menu4</a></li>
+          <li><a href="#">menu5</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section id="banner">
+    <div class="container column">
+    <div class="banner_txt">
+      <h2>Lorem ipsum dolor.</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="banner_option">
+      <!-- div.banner$*3>.banner_title>lorem10^a[#]>{more} -->
+      <div class="banner1">
+        <div class="banner_title">Lorem ipsum dolor sit amet, consectetur?</div>
+        <a href="#">more</a>
+      </div>
+      <div class="banner2">
+        <div class="banner_title">Beatae labore voluptatem fugit deserunt vel ?</div>
+        <a href="#">more</a>
+      </div>
+      <div class="banner3">
+        <div class="banner_title">Vel aliquam qui aperiam ducimus, nihil similiqu?</div>
+        <a href="#">more</a>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="general">
+
+  </section>
+</body>
+</html>

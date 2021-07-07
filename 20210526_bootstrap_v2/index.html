@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HOMEPAGE</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+
+    <script src="js/jquery.3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+<style>
+  :root{
+    --primary-color-1:#4458cc;
+    --primary-color-2:#854fee;
+    --bgcolor1:#efefef;
+    --bgcolor2:#f0f0f0;
+    --gradient-color-1:linear-gradient(90deg,#4458cc,#854fee);
+    --shadow-color:0 10px 30px rgba(118,85,225,0.3);
+    --box-shadow:0 10px 20px rgba(57,56,61,0.3);
+  }
+.visualWrap{
+  background:url(assets/slider-bg.svg) no-repeat center;
+  background-size:cover;
+}
+.button.primary-button{
+  box-shadow:var(--box-shadow);
+  background:var(--gradient-color-1);color:white;
+
+}
+.button.secondary-button{
+    box-shadow:var(--box-shadow);
+}
+.contentWrap{
+  background:var(--bgcolor1);
+}
+.headerWrap{transition:0.3s}
+.headerWrap .nav-item{font-size:1.1rem;
+   border-bottom:4px solid transparent; transition: 0.3s}
+.headerWrap .nav-item:hover{border-bottom:4px solid var(--primary-color-1);}
+.headerWrap.fixed-top{
+  box-shadow:var(--box-shadow);
+  background:var(--primary-color-2)!important;
+}
+@media screen and (max-width:756px){
+  .headerWrap .nav-item:hover{border-bottom: 0 none; background:var(--bgcolor2);}
+  .headerWrap .nav-item{border-bottom: 0 none; padding-left: 20px;}
+}
+
+</style>
+</head>
+<body>
+<div class="headerWrap bg-white">
+  <div class="container px-md-0 "> <!-- 왼쪽오른쪽0으로 맞추기 -->
+    <nav class="navbar navbar-expand-md navbar-light"> <!-- 부트스트랩은 색상이반대로 되어있다 라이트가 검은색 다크가힁색 프라이머리가 기본색이다. -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.svg" alt="" class="img-fluid"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navMenu"> <!-- 데이터타겟과 아이디가 같아야함 -->
+
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COMPANY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COMMUNITY</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+  </div>
+</div><!-- headerWrap -->
+
+<div class="visualWrap">
+  <div class="container px-md-0 py-5">
+    <div class="row"> <!-- 행넣고 칸맞춰주는아이디 flex탑재-->
+      <div class="col-md-6 align-self-center text-center text-md-left order-2 order-md-1">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <a href="!#" class="btn button primary-button px-4">MORE</a>
+        <a href="!#" class="btn button secondary-button btn-outline-primary px-4">EMAIL</a>
+      </div>
+      <div class="col-md-6 order-1  mb-5 mb-md-0 order-md-2">
+        <img src="assets/slider.svg" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div><!-- visualWrap -->
+
+<div class="contentWrap">
+<div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 order-2 order-md-1">
+          <img src="assets/sobre.svg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6  text-center text-md-left order-1 order-md-2">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Sapiente mollitia magni accusamus unde.</p>
+          <a href="!#" class="btn button primary-button px-5 mb-5 mb-md-0 d-block d-md-inline-block">EVENT CONTACT</a>
+        </div>
+  </div>
+</div>
+</div><!-- contentWrap -->
+
+<style>
+  .serviceWrap h2.title:after,
+  .portfolioWrap h2.title:after,
+  .customer h2.title:after{
+    content:""; display:block; width: 200px; height: 2px;
+    background:var(--primary-color-1); margin: 10px auto;
+  }
+  .serviceWrap .card img{height: 200px; }
+  .serviceWrap .card{background:var(--bgcolor2); border:0 none; transition:0.3s}
+  .serviceWrap .card:hover{transform:scale(1.1); box-shadow:var(--box-shadow);}
+
+  .portfolioWrap .btn-group button{
+    background:none;border:0 none;font-weight:bold;
+    outline:0;font-size: 1.1rem}
+  .portfolioWrap .btn-group button + button{margin-left:30px;}
+  .portfolioWrap .btn-group button.active{color:var(--primary-color-1)}
+  .portfolioWrap .element-item img{border-radius:10px; transition:0.3s; }
+  .portfolioWrap .element-item img:hover{box-shadow:var(--box-shadow)}
+
+  .customer .sliderView{padding: 30px; background:var(--bgcolor1); border-radius:5px;}
+
+  .footer{background:var(--bgcolor2);}
+  .icon li + li{margin-left:25px;}
+  .icon a{display: block; width: 50px; height: 50px; border-radius: 25px;
+    background:#fff; text-align: center; line-height: 50px; transition:0.3s}
+  .icon a img{max-width: 20px;}
+  .icon a:hover{box-shadow:var(--shadow-color)}
+
+</style>
+<div class="serviceWrap">
+  <div class="container py-5">
+    <h2 class="title text-center">SERVRICE</h2>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+       Eaque, nihil sint asperiores?</p>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3 text-center mb-5 mb-lg-0">
+        <div class="card p-3">
+          <img src="assets/destaque1.svg" alt="" class="img-fluid m-3">
+            <div class="card-body">
+              <h4>Lorem ipsum.</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Tenetur, voluptatum.</p>
+            </div>
+        </div>
+     </div>
+      <div class="col-md-6 col-lg-3 text-center mb-5 mb-lg-0">
+        <div class="card p-3">
+          <img src="assets/destaque2.svg" alt="" class="img-fluid m-3">
+            <div class="card-body">
+              <h4>Lorem ipsum.</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Tenetur, voluptatum.</p>
+            </div>
+        </div>
+     </div>
+      <div class="col-md-6 col-lg-3 text-center mb-5 mb-lg-0">
+        <div class="card p-3">
+          <img src="assets/destaque3.svg" alt="" class="img-fluid m-3">
+            <div class="card-body">
+              <h4>Lorem ipsum.</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Tenetur, voluptatum.</p>
+            </div>
+        </div>
+     </div>
+      <div class="col-md-6 col-lg-3 text-center">
+        <div class="card p-3">
+          <img src="assets/destaque4.svg" alt="" class="img-fluid m-3">
+            <div class="card-body">
+              <h4>Lorem ipsum.</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Tenetur, voluptatum.</p>
+            </div>
+        </div>
+     </div>
+
+  </div>
+
+    </div>
+  </div><!-- serviceWrap -->
+
+<div class="portfolioWrap mb-5">
+  <div class="container">
+    <h2 class="title text-center">portfolio</h2>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Eaque, nihil sint asperiores?</p>
+    <div class="btn-group">
+      <button data-filter="" class="active" id="btn">ALL</button>
+      <button data-filter=".web">WEBSITE</button>
+      <button data-filter=".photo">PHOTOSHOP</button>
+      <button data-filter=".illu">ILLUST</button>
+    </div>
+    <div class="row view">
+      <div class="col-6 col-lg-3 element-item web mb-3">
+        <a href="assets/servicos/1.jpg" class="popup_link">
+          <img src="assets/servicos/1.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item web mb-3">
+        <a href="assets/servicos/2.jpg" class="popup_link">
+          <img src="assets/servicos/2.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item photo mb-3">
+        <a href="assets/servicos/3.jpg" class="popup_link">
+          <img src="assets/servicos/3.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item photo mb-3">
+        <a href="assets/servicos/4.jpg" class="popup_link">
+          <img src="assets/servicos/4.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item illu mb-3">
+        <a href="assets/servicos/5.jpg" class="popup_link">
+          <img src="assets/servicos/5.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item illu mb-3">
+        <a href="assets/servicos/6.jpg" class="popup_link">
+          <img src="assets/servicos/6.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item illu mb-3">
+        <a href="assets/servicos/7.jpg" class="popup_link">
+          <img src="assets/servicos/7.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item illu mb-3">
+        <a href="assets/servicos/8.jpg" class="popup_link">
+          <img src="assets/servicos/8.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3 element-item illu mb-3">
+        <a href="assets/servicos/9.jpg" class="popup_link">
+          <img src="assets/servicos/9.jpg" alt="" class="img-fluid">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div><!-- portfolioWrap -->
+<div class="customer mb-5">
+  <div class="container">
+    <h2 class="title text-center">CUSTOMER</h2>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Eaque, nihil sint asperiores?</p>
+       <div class="owl-carousel owl-theme owl-loaded">
+      <!-- #1 -->
+      <div>
+        <div class="sliderView d-flex">
+          <img src="assets/user.svg" alt="" class="img-fluid mr-3"
+          style="max-width:150px">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nemo?</p>
+            <p>
+              <img src="assets/quote.svg" alt="" class="d-block ml-auto"
+              style="max-width:30px">
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- #2 -->
+      <div>
+        <div class="sliderView d-flex">
+          <img src="assets/user.svg" alt="" class="img-fluid mr-3"
+          style="max-width:150px">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nemo?</p>
+            <p>
+              <img src="assets/quote.svg" alt="" class="d-block ml-auto"
+              style="max-width:30px">
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- #3 -->
+      <div>
+        <div class="sliderView d-flex">
+          <img src="assets/user.svg" alt="" class="img-fluid mr-3"
+          style="max-width:150px">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nemo?</p>
+            <p>
+              <img src="assets/quote.svg" alt="" class="d-block ml-auto"
+              style="max-width:30px">
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- #4 -->
+      <div>
+        <div class="sliderView  d-flex">
+          <img src="assets/user.svg" alt="" class="img-fluid mr-3"
+          style="max-width:150px">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nemo?</p>
+            <p>
+              <img src="assets/quote.svg" alt="" class="d-block ml-auto"
+              style="max-width:30px">
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div><!-- customer -->
+
+<div class="footer py-5">
+  <div class="container pb-5">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+        <img src="assets/logo.svg" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <ul class="icon d-flex justify-content-center justify-content-md-end">
+          <li><a href="!#"><img src="assets/facebook.svg" alt=""></a></li>
+          <li><a href="!#"><img src="assets/twitter.svg" alt=""></a></li>
+          <li><a href="!#"><img src="assets/instagram.svg" alt=""></a></li>
+          <li><a href="!#"><img src="assets/linkedin.svg" alt=""></a></li>
+          <li><a href="!#"><img src="assets/youtube.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let navOffset = $(".headerWrap").height()+100;
+
+  $(window).scroll(function(){
+    hScroll();
+    });
+    function hScroll(){
+
+    let scroll = $(window).scrollTop();
+    if(navOffset < scroll){
+      $(".headerWrap").addClass("fixed-top");
+    }else{
+      $(".headerWrap").removeClass("fixed-top");
+    }
+  }
+  hScroll();
+
+  const btns = $(".portfolioWrap .btn-group button");
+  btns.click(function(){
+    let i = $(this).index();
+    btns.removeClass("active");
+    btns.eq(i).addClass("active");
+
+    let selector = btns.eq(i).attr("data-filter");
+    console.log(selector);
+  $(".portfolioWrap .view").isotope({
+    filter:selector
+})
+
+  });
+ window.onload = function(){
+   $(".portfolioWrap .btn-group #btn").trigger("click");
+ }
+
+ $(".view .popup_link").magnificPopup({type:"image"});
+ $(".customer .owl-carousel").owlCarousel({
+   loop:false,
+   margin:30,
+   autoplay:true,
+   responsive:{
+     0:{items:1},
+     600:{items:1},
+     1000:{items:2}
+   }
+ });
+</script>
+</body>
+</html>
